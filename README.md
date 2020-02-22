@@ -10,3 +10,6 @@ A very simple arduino C script for running on an ESP8266.
 
 # Web API
 This code is for use on a server with PHP. There are two commands, `pushed` and `check`. Using `pushed` will get the server to update the time the button was pushed at to the current server time. `check` will get the server to return the last time the button was pushed. You need to ensure PHP has writing access to the directory the file is in.
+
+# Using
+Connect a button between pin D1 and ground. No pullup resistor is needed because the internal pullups are used instead. Fill in your WiFi SSID and password. Stick the PHP file on a server with PHP (XAMPP can be used), put the URL to the PHP file into the code as well. Compile and upload the code using instructions above, enjoy.
