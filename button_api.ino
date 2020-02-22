@@ -1,7 +1,6 @@
 #include <ESP8266WiFi.h>
 #include <ESP8266HTTPClient.h>
 #include <ESP.h>
-#include <Wire.h>
 
 // ssid and key
 const char* ssid = "";
@@ -19,10 +18,6 @@ void setup() {
 
   // initialise button input pin
   pinMode(D1, INPUT_PULLUP);
-
-  // init wire lib
-  Wire.pins(0,2);
-  Wire.begin();
 
   // initialise LED to indicate connection to internet
   pinMode(led, OUTPUT);
