@@ -56,8 +56,8 @@ void buttonPressed() {
   HTTPClient http;
 
   Serial.print("Connecting to "); Serial.println(host);
-  // open connection to server
-  http.begin(host, 80, "/button/?status=pushed");
+  // open connection to server - assumes PHP file is on website root
+  http.begin(host, 80, "/?status=pushed");
   Serial.print("Sending request");
 
   // request page
